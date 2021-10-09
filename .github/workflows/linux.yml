@@ -19,7 +19,5 @@ jobs:
 
     - name: Install Dependencies
       shell: bash
-      run: 
-        lastCommmit = ${{git rev-parse HEAD}}
-        echo lastCommit
-        wget https://github.com/juwonk1018/linux/archive/${{lastCommit}}.zip
+      run: lastCommmit = ${{git rev-parse HEAD}}
+
