@@ -1,0 +1,4 @@
+[submodule "linux"]
+	path = linux
+	url = git@github.com:juwonk1018/linux
+	branch = csi2115-f21
