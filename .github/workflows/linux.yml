@@ -1,0 +1,25 @@
+name: HW2 C
+
+on:
+  push:
+    paths:
+      - 'linux/*'
+
+env:
+  BUILD_TYPE: Debug
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Install Dependencies
+      shell: bash
+      run: 
+        lastCommmit = ${{git rev-parse HEAD}}
+        echo lastCommit
+        wget https://github.com/juwonk1018/linux/archive/${{lastCommit}}.zip
