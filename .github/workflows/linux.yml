@@ -3,7 +3,7 @@ name: HW2 C
 on:
   push:
     paths:
-      - 'linux/*'
+      - 'linux/**'
 
 env:
   BUILD_TYPE: Debug
