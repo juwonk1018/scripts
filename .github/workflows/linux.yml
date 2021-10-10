@@ -20,11 +20,12 @@ jobs:
     - name: Install Dependencies
       shell: bash
       run: lastCommmit = $(git rev-parse HEAD:linux)
-           wget https://github.com/juwonk1018/linux/archive/lastCommit.zip
+    - name: download
+      run: wget https://github.com/juwonk1018/linux/archive/${lastCommit}.zip
     - name: unzip
-      run: unzip lastCommit.zip
+      run: unzip ${lastCommit}.zip
     - name: check
       run: ls -al
     - name: build-linux
-      run: ./build-linux.sh linux-lastCommit tinyconfig
+      run: ./build-linux.sh linux-${lastCommit} tinyconfig
 
