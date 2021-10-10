@@ -18,13 +18,11 @@ jobs:
         submodules: true
 
     - name: download
-      run:
-          lastCommit = $(git rev-parse HEAD:linux)
-          wget https://github.com/juwonk1018/linux/archive/${lastCommit}.zip
+      run: wget https://github.com/juwonk1018/linux/archive/$$(git rev-parse HEAD:linux).zip
     - name: unzip
-      run: unzip ${lastCommit}.zip
+      run: unzip $(git rev-parse HEAD:linux).zip
     - name: check
       run: ls -al
     - name: build-linux
-      run: ./build-linux.sh linux-${lastCommit} tinyconfig
+      run: ./build-linux.sh linux-$(git rev-parse HEAD:linux) tinyconfig
 
