@@ -16,7 +16,8 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-
+    - name: initailzation
+      run: ./install-deps.sh
     - name: download
       run: wget https://github.com/juwonk1018/linux/archive/$(git rev-parse HEAD:linux).zip
     - name: unzip
@@ -25,4 +26,3 @@ jobs:
       run: ls -al
     - name: build-linux
       run: ./build-linux.sh linux-$(git rev-parse HEAD:linux) tinyconfig
-
