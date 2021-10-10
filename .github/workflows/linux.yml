@@ -18,7 +18,7 @@ jobs:
         submodules: true
 
     - name: download
-      run: wget https://github.com/juwonk1018/linux/archive/$$(git rev-parse HEAD:linux).zip
+      run: wget https://github.com/juwonk1018/linux/archive/$(git rev-parse HEAD:linux).zip
     - name: unzip
       run: unzip $(git rev-parse HEAD:linux).zip
     - name: check
