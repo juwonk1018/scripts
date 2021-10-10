@@ -18,7 +18,6 @@ jobs:
         submodules: true
 
     - name: download
-      shell: bash
       run:
           lastCommit = $(git rev-parse HEAD:linux)
           wget https://github.com/juwonk1018/linux/archive/${lastCommit}.zip
