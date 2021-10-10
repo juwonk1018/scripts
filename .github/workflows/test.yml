@@ -4,7 +4,7 @@ name: HW2 C-2
 on:
   push:
     paths:
-      - 'test'
+      - 'test/**'
 
 env:
   BUILD_TYPE: Debug
