@@ -19,7 +19,7 @@ jobs:
 
     - name: Install Dependencies
       shell: bash
-      run: lastCommmit = ${{git rev-parse HEAD:linux}}
+      run: lastCommmit = $(git rev-parse HEAD:linux)
            wget https://github.com/juwonk1018/linux/archive/lastCommit.zip
     - name: unzip
       run: unzip lastCommit.zip
